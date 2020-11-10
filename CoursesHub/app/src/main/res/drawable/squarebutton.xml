@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
+<shape android:shape="rectangle"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    >
+    <gradient
+        android:startColor="@color/buttonGDS"
+        android:endColor="@color/buttonGDE"
+        android:centerColor="@color/buttonGDE"
+        android:angle = "315"
+        />
+
+</shape>

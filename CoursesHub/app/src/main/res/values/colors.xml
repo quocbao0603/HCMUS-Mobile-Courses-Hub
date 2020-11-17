@@ -1,11 +1,61 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#6200EE</color>
-    <color name="colorPrimaryDark">#3700B3</color>
-    <color name="colorAccent">#03DAC5</color>
-    <color name="buttonGDE">#6B009A</color>
-    <color name="buttonGDS">#7262D5</color>
-    <color name="titlecolor">#333</color>
-    <color name="descolor">#FFBCBABA</color>
+    <color name="Darker">#254EDA</color>
+    <color name="MainColor">#3366FF</color>
+    <color name="Lighter">#6690FF</color>
+    <color name="Dark100">#C7C8D9</color>
+    <color name="Dark200">#8E90A6</color>
+    <color name="Dark300">#555770</color>
+    <color name="Dark400">#28293D</color>
+    <color name="Dark500">#000000</color>
+
+    <color name="Light100">#FFF</color>
+    <color name="Light200">#FAFAFC</color>
+    <color name="Light300">#F2F2F5</color>
+    <color name="Light400">#EBEBF0</color>
+    <color name="Light500">#E3E4EB</color>
+
+    <color name="Success100">#D6FDD1</color>
+    <color name="Success200">#A7F9A7</color>
+    <color name="Success300">#78ED84</color>
+    <color name="Success400">#54DC6E</color>
+    <color name="Success500">#23C653</color>
+    <color name="Success600">#1AAA52</color>
+    <color name="Success700">#118D4E</color>
+    <color name="Success800">#0B7247</color>
+    <color name="Success900">#065F43</color>
+
+    <color name="Pending100">#D8F3FE</color>
+    <color name="Pending200">#B2E4FD</color>
+    <color name="Pending300">#8DD1FE</color>
+    <color name="Pending400">#70BEFE</color>
+    <color name="Pending500">#41A0FC</color>
+    <color name="Pending600">#2F7CD8</color>
+    <color name="Pending700">#205BB5</color>
+    <color name="Pending800">#134091</color>
+    <color name="Pending900">#0C2E78</color>
+
+    <color name="Warning100">#FFFCD7</color>
+    <color name="Warning200">#FFF9AF</color>
+    <color name="Warning300">#FFF589</color>
+    <color name="Warning400">#FFF16C</color>
+    <color name="Warning500">#FFEC3A</color>
+    <color name="Warning600">#DBC72A</color>
+    <color name="Warning700">#B6A41C</color>
+    <color name="Warning800">#938111</color>
+    <color name="Warning900">#7A6A0B</color>
+
+    <color name="Danger100">#FFE6D7</color>
+    <color name="Danger200">#FFC9B1</color>
+    <color name="Danger300">#FFA288</color>
+    <color name="Danger400">#FF7F6A</color>
+    <color name="Danger500">#FF4539</color>
+    <color name="Danger600">#DB2A30</color>
+    <color name="Danger700">#B81D2F</color>
+    <color name="Danger800">#93132C</color>
+    <color name="Danger900">#7A0B2B</color>
+
+
+
 
 </resources>

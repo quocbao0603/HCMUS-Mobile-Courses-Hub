@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="match_parent"
+    android:layout_height="120dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:padding="10dp"
+    android:background="@drawable/background_gray"
+    >
+
+    <ImageView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/course_avt"
+        android:layout_alignParentLeft="true"
+        android:adjustViewBounds="true"
+        android:id="@+id/course_avt"
+        />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_toRightOf="@+id/course_avt"
+        android:layout_marginLeft="10dp"
+        android:marginTop="5dp"
+        android:marginBottom="5dp"
+        android:weightSum="5">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/font_textlabel"
+            android:id="@+id/course_title"
+            android:text="INTRODUCTION TO MOBILE"
+            android:maxLength="25"
+            android:textColor="@color/Dark500"
+            android:gravity="center_vertical"
+            android:layout_weight="2"
+        />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/course_teacher"
+            style="@style/font_mediumlabel"
+            android:textColor="@color/Dark300"
+            android:gravity="center_vertical"
+            android:text="By Dr. Tran Minh Triet"
+            android:maxLength="25"
+            android:layout_weight="1"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/course_ta1"
+            style="@style/font_mediumlabel"
+            android:gravity="center_vertical"
+            android:textColor="@color/Dark300"
+            android:text="TA. Thanh An Nguyen"
+            android:maxLength="25"
+            android:layout_weight="1"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/course_ta2"
+            style="@style/font_mediumlabel"
+            android:gravity="center_vertical"
+            android:textColor="@color/Dark300"
+            android:maxLength="25"
+            android:text="TA. Do Trong Le"
+            android:layout_weight="1"
+            />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_alignParentRight="true"
+        android:layout_gravity="left"
+
+        >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_icon_favorite_border_24px"
+            android:id="@+id/course_bookmark"
+            />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_icon_more_24px"
+            android:id="@+id/course_more"/>
+
+    </LinearLayout>
+</RelativeLayout>

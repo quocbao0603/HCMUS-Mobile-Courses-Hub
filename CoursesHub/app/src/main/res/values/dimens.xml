@@ -15,4 +15,25 @@
     <dimen name="mainscreen_margin_top">22dp</dimen>
     <dimen name="home_item_margin_bottom">12dp</dimen>
 
+    <dimen name = "fontsize_display1">64sp</dimen>
+    <dimen name = "fontsize_display2">56sp</dimen>
+    <dimen name = "fontsize_h1">40sp</dimen>
+    <dimen name="fontsize_h2">32sp</dimen>
+    <dimen name="fontsize_h3">28sp</dimen>
+    <dimen name="fontsize_h4">24sp</dimen>
+    <dimen name="fontsize_h5">20sp</dimen>
+    <dimen name="fontsize_h6">16sp</dimen>
+    <dimen name="fontsize_body">16sp</dimen>
+    <dimen name="fontsize_smallbody">14sp</dimen>
+    <dimen name="fontsize_blockquotes">20sp</dimen>
+    <dimen name="fontsize_lead">14sp</dimen>
+    <dimen name="fontsize_capitalized">14sp</dimen>
+    <dimen name="fontsize_small">12sp</dimen>
+    <dimen name="fontsize_tiny">10sp</dimen>
+    <dimen name="fontsize_textlabel">14sp</dimen>
+    <dimen name="fontsize_smalllabel">10sp</dimen>
+    <dimen name="fontsize_mediumlabel">12sp</dimen>
+    <dimen name="fontsize_largelabel">14sp</dimen>
+    <dimen name="fontsize_biglabel">16sp</dimen>
+
 </resources>

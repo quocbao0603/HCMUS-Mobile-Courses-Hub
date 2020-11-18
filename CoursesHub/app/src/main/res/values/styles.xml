@@ -11,4 +11,110 @@
         <item name="background">@drawable/button_normal</item>
     </style>
 
+
+    <style name="font_display1" >
+        <item name="fontStyle">normal</item>
+        <item name="fontFamily">@font/inter_bold</item>
+        <item name="android:textSize">@dimen/fontsize_display1</item>
+    </style>
+
+    <style name="font_display2">
+        <item name="fontStyle">normal</item>
+        <item name="fontFamily">@font/inter_regular</item>
+        <item name="android:textSize">@dimen/fontsize_display2</item>
+    </style>
+
+    <style name="font_h1">
+        <item name="fontFamily">@font/inter_bold</item>
+        <item name="android:textSize">@dimen/fontsize_h1</item>
+    </style>
+
+    <style name="font_h2">
+        <item name="fontFamily">@font/inter_bold</item>
+        <item name="android:textSize">@dimen/fontsize_h2</item>
+    </style>
+
+    <style name="font_h3">
+        <item name="fontFamily">@font/inter_bold</item>
+        <item name="android:textSize">@dimen/fontsize_h3</item>
+    </style>
+
+    <style name="font_h4">
+        <item name="fontFamily">@font/inter_bold</item>
+        <item name="android:textSize">@dimen/fontsize_h4</item>
+    </style>
+
+    <style name="font_h5">
+        <item name="fontFamily">@font/inter_bold</item>
+        <item name="android:textSize">@dimen/fontsize_h5</item>
+    </style>
+
+    <style name="font_h6">
+        <item name="fontFamily">@font/inter_bold</item>
+        <item name="android:textSize">@dimen/fontsize_h6</item>
+    </style>
+
+    <style name="font_body">
+        <item name="fontFamily">@font/inter_regular</item>
+        <item name="android:textSize">@dimen/fontsize_h6</item>
+    </style>
+
+    <style name="font_smallbody">
+        <item name="fontFamily">@font/inter_regular</item>
+        <item name="android:textSize">@dimen/fontsize_smallbody</item>
+    </style>
+
+    <style name="font_blockquotes">
+        <item name="fontFamily">@font/inter_semibold</item>
+        <item name="android:textSize">@dimen/fontsize_blockquotes</item>
+    </style>
+
+    <style name="font_lead">
+        <item name="fontFamily">@font/inter_bold</item>
+        <item name="android:textSize">@dimen/fontsize_lead</item>
+    </style>
+
+    <style name="font_capitalized">
+        <item name="fontFamily">@font/inter_bold</item>
+        <item name="android:textSize">@dimen/fontsize_capitalized</item>
+        <item name="android:textAllCaps">true</item>
+    </style>
+
+    <style name="font_smalltext">
+        <item name="fontFamily">@font/inter_regular</item>
+        <item name="android:textSize">@dimen/fontsize_small</item>
+    </style>
+
+    <style name="font_tinytext">
+        <item name="fontFamily">@font/inter_semibold</item>
+        <item name="android:textSize">@dimen/fontsize_tiny</item>
+    </style>
+
+    <style name="font_textlabel">
+        <item name="fontFamily">@font/inter_bold</item>
+        <item name="android:textSize">@dimen/fontsize_textlabel</item>
+        <item name="android:textAllCaps">true</item>
+
+    </style>
+
+    <style name="font_smalllabel">
+        <item name="fontFamily">@font/inter_semibold</item>
+        <item name="android:textSize">@dimen/fontsize_blockquotes</item>
+    </style>
+
+    <style name="font_mediumlabel">
+        <item name="fontFamily">@font/inter_medium</item>
+        <item name="android:textSize">@dimen/fontsize_mediumlabel</item>
+    </style>
+
+    <style name="font_largelabel">
+        <item name="fontFamily">@font/inter_medium</item>
+        <item name="android:textSize">@dimen/fontsize_largelabel</item>
+    </style>
+
+    <style name="font_biglabel">
+        <item name="fontFamily">@font/inter_medium</item>
+        <item name="android:textSize">@dimen/fontsize_biglabel</item>
+    </style>
+
 </resources>

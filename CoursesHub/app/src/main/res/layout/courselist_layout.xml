@@ -2,6 +2,7 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <TextView
@@ -10,8 +11,9 @@
         android:id="@+id/home_title"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
-        style="@style/font_h1"
+        style="@style/font_h2"
         android:textColor="@color/Dark500"
+        android:layout_marginLeft="20dp"
         android:text="Courses"/>
 
     <androidx.recyclerview.widget.RecyclerView

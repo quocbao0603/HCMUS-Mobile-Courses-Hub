@@ -1,4 +1,4 @@
-package com.example.courseshub.courseindex;
+package com.example.courseshub.courseindex.course;
 
 import android.os.Bundle;
 

@@ -27,7 +27,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Advanced Learning - Psychology"
-            android:textColor="@color/titlecolor"
+            android:textColor="@color/Dark400"
             android:id="@+id/courseinfo_title"
             android:textSize="@dimen/courseinfo_h1"
             android:typeface = "sans"/>
@@ -35,7 +35,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="by Priya Rahul"
-            android:textColor="@color/descolor"
+            android:textColor="@color/Dark400"
             android:id="@+id/courseinfo_author"
             android:textSize="@dimen/courseinfo_small"
             android:typeface = "sans"/>
@@ -49,7 +49,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:text="JOIN COURSE"
-                android:background = "@drawable/Button_Normal"
+                android:background = "@drawable/button_normal"
                 android:layout_weight="1"/>
             <LinearLayout
                 android:layout_width="match_parent"
@@ -60,7 +60,7 @@
                 <ImageView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:src="@drawable/ic_baseline_star_24"
+                    android:src="@drawable/ic_icon_add_comment_24px"
                     />
                 <TextView
                     android:layout_width="match_parent"

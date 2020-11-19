@@ -1,6 +1,5 @@
-package com.example.courseshub.courseindex.mainfragment;
+package com.example.courseshub.Main.Fragment;
 
-import android.content.Context;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.os.Bundle;
@@ -12,17 +11,19 @@ import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.courseshub.CourseInfo.CourseinfoFragment;
+import com.example.courseshub.Main.Adapter.CourseAdapter;
 import com.example.courseshub.R;
-import com.example.courseshub.courseindex.course.CourseInfo;
-import com.google.android.material.tabs.TabLayout;
+import com.example.courseshub.CourseInfo.CourseInfo;
 
 import java.util.ArrayList;
-import java.util.List;
 
-public class CourseListFragment extends Fragment {
+public class CourseListFragment extends Fragment implements  View.OnClickListener{
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
@@ -41,7 +42,7 @@ public class CourseListFragment extends Fragment {
         holders.add(new CourseInfo(bitmap, "Introudction to mobile", "By Dr. Tran Minh Triet", "TA. Nguyen Thanh An", "TA. Do Trong Le"));
         holders.add(new CourseInfo(bitmap, "Introudction to mobile", "By Dr. Tran Minh Triet", "TA. Nguyen Thanh An", "TA. Do Trong Le"));
         Log.d("DBG", "Setting courses");
-        CourseAdapter courselist_adapter = new CourseAdapter(getContext(), holders);
+        CourseAdapter courselist_adapter = new CourseAdapter(getContext(), holders, getChildFragmentManager());
         recyclerView.setAdapter(courselist_adapter);
         return view;
     }
@@ -58,6 +59,18 @@ public class CourseListFragment extends Fragment {
         super.onViewCreated(view, savedInstanceState);
 
     }
+
+    @Override
+    public void onClick(View v) {
+        FragmentTransaction fragmentTransaction = getActivity().getSupportFragmentManager().beginTransaction();
+        Fragment courseInfo = CourseinfoFragment.newInstance();
+        Log.d("DBG", "11111111111111");
+        fragmentTransaction.replace(R.id.mainViewPager, courseInfo);
+        fragmentTransaction.addToBackStack(null);
+        Log.d("DBG", "22222222222222222");
+        fragmentTransaction.commit();
+    }
+
 }
 
 

@@ -1,21 +1,25 @@
-package com.example.courseshub.courseindex.course;
+package com.example.courseshub.CourseInfo.CourseInfo_Tab;
 
 import android.os.Bundle;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.viewpager.widget.ViewPager;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.example.courseshub.CourseInfo.CourseInfoAdapter;
 import com.example.courseshub.R;
 
 /**
  * A simple {@link Fragment} subclass.
- * Use the {@link FragmentNoti#newInstance} factory method to
+ * Use the {@link FragmentQuiz#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class FragmentNoti extends Fragment {
+public class FragmentQuiz extends Fragment {
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -26,7 +30,10 @@ public class FragmentNoti extends Fragment {
     private String mParam1;
     private String mParam2;
 
-    public FragmentNoti() {
+    ViewPager viewPager;
+    CourseInfoAdapter adapter;
+
+    public FragmentQuiz() {
         // Required empty public constructor
     }
 
@@ -36,11 +43,11 @@ public class FragmentNoti extends Fragment {
      *
      * @param param1 Parameter 1.
      * @param param2 Parameter 2.
-     * @return A new instance of fragment FragmentNoti.
+     * @return A new instance of fragment FragmentQuiz.
      */
     // TODO: Rename and change types and number of parameters
-    public static FragmentNoti newInstance(String param1, String param2) {
-        FragmentNoti fragment = new FragmentNoti();
+    public static FragmentQuiz newInstance(String param1, String param2) {
+        FragmentQuiz fragment = new FragmentQuiz();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);
@@ -55,12 +62,21 @@ public class FragmentNoti extends Fragment {
             mParam1 = getArguments().getString(ARG_PARAM1);
             mParam2 = getArguments().getString(ARG_PARAM2);
         }
+
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.courseindex_tabnoti, container, false);
+
+        return inflater.inflate(R.layout.courseindex_tabquiz, container, false);
+    }
+
+    @Override
+    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
+        adapter = new CourseInfoAdapter(getChildFragmentManager());
+        viewPager = view.findViewById(R.id.tabquiz);
+        viewPager.setAdapter(adapter);
     }
 }

@@ -1,4 +1,4 @@
-package com.example.courseshub.courseindex;
+package com.example.courseshub.Main.Adapter;
 
 import android.content.Context;
 
@@ -7,16 +7,16 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentPagerAdapter;
 
-import com.example.courseshub.courseindex.mainfragment.ChatFragment;
-import com.example.courseshub.courseindex.mainfragment.CourseListFragment;
-import com.example.courseshub.courseindex.mainfragment.MoreFragment;
-import com.example.courseshub.courseindex.mainfragment.SearchFragment;
+import com.example.courseshub.Main.Fragment.ChatFragment;
+import com.example.courseshub.Main.Fragment.CourseListFragment;
+import com.example.courseshub.Main.Fragment.MoreFragment;
+import com.example.courseshub.Main.Fragment.SearchFragment;
 
-public class MainPagerAdapter extends FragmentPagerAdapter {
+public class HomePageAdapter extends FragmentPagerAdapter {
     int _tabCount = 4;
     Context _context;
 
-    public MainPagerAdapter(@NonNull FragmentManager fm, Context context) {
+    public HomePageAdapter(@NonNull FragmentManager fm, Context context) {
         super(fm, FragmentPagerAdapter.BEHAVIOR_RESUME_ONLY_CURRENT_FRAGMENT);
         _context = context;
     }

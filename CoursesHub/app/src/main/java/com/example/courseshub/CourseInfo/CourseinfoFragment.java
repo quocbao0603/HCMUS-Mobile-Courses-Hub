@@ -1,4 +1,4 @@
-package com.example.courseshub.courseindex.mainfragment;
+package com.example.courseshub.CourseInfo;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -11,18 +11,17 @@ import androidx.fragment.app.Fragment;
 
 import com.example.courseshub.R;
 
-public class SearchFragment extends Fragment {
+public class CourseinfoFragment extends Fragment {
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.search_layout, container, false);
+        return inflater.inflate(R.layout.courseinfo, container, false);
     }
 
-    public static SearchFragment newInstance() {
+    public static CourseinfoFragment newInstance() {
 
         Bundle args = new Bundle();
-
-        SearchFragment fragment = new SearchFragment();
+        CourseinfoFragment fragment = new CourseinfoFragment();
         fragment.setArguments(args);
         return fragment;
     }

@@ -1,6 +1,7 @@
-package com.example.courseshub.courseindex.mainfragment;
+package com.example.courseshub.Main.Adapter;
 
 import android.content.Context;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -8,28 +9,38 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.courseshub.CourseInfo.CourseinfoFragment;
+import com.example.courseshub.Main.Fragment.CourseListFragment;
 import com.example.courseshub.R;
-import com.example.courseshub.courseindex.course.CourseInfo;
+import com.example.courseshub.CourseInfo.CourseInfo;
 
 import java.util.ArrayList;
-import java.util.List;
 
 public class CourseAdapter extends RecyclerView.Adapter<CourseAdapter.CourseHolder>{
     private ArrayList<CourseInfo> _data;
     private LayoutInflater _inflater;
-    private View.OnClickListener _listener;
+    private View.OnClickListener _listener = new CourseListFragment();
+    private FragmentManager _fragmentManager;
+    private Context _context;
 
-    public CourseAdapter(Context context, ArrayList<CourseInfo> data){
+    public CourseAdapter(Context context, ArrayList<CourseInfo> data, FragmentManager fragmentManager){
         _inflater = LayoutInflater.from(context);
         _data = data;
+        _context = context;
+        _fragmentManager = fragmentManager;
     }
 
     @NonNull
     @Override
     public CourseHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View view = _inflater.inflate(R.layout.course_item, parent, false);
+
+        view.setOnClickListener(_listener);
         return new CourseHolder(view);
     }
 
@@ -65,5 +76,7 @@ public class CourseAdapter extends RecyclerView.Adapter<CourseAdapter.CourseHold
             _more = itemView.findViewById(R.id.course_more);
         }
     }
+
+
 }
 

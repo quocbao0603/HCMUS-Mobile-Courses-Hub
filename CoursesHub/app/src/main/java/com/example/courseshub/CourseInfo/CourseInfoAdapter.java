@@ -1,10 +1,14 @@
-package com.example.courseshub.courseindex.course;
+package com.example.courseshub.CourseInfo;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentStatePagerAdapter;
+
+import com.example.courseshub.CourseInfo.CourseInfo_Tab.FragmentDiscus;
+import com.example.courseshub.CourseInfo.CourseInfo_Tab.FragmentNoti;
+import com.example.courseshub.CourseInfo.CourseInfo_Tab.FragmentQuiz;
 
 public class CourseInfoAdapter extends FragmentStatePagerAdapter {
     Fragment[] fragments;

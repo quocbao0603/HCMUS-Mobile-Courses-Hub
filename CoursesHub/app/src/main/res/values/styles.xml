@@ -115,6 +115,7 @@
     <style name="font_biglabel">
         <item name="fontFamily">@font/inter_medium</item>
         <item name="android:textSize">@dimen/fontsize_biglabel</item>
+        <item name="android:lineSpacingExtra">7sp</item>
     </style>
 
 </resources>

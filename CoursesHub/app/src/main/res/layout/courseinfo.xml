@@ -1,115 +1,138 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <ImageView
+    <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:adjustViewBounds="true"
-        android:scaleType="centerCrop"
-        android:src="@drawable/ic_launcher_foreground"
+        style="@style/font_h4"
+        android:textColor="@color/Dark500"
+        android:text="Introduction to mobile"
         app:layout_constraintTop_toTopOf="parent"
-        android:id="@+id/courseinfo_featuredimage"/>
+        android:id="@+id/courseinfo_title"
+        />
 
-    <LinearLayout
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintTop_toBottomOf="@+id/courseinfo_featuredimage"
-        android:layout_marginTop="@dimen/courseinfo_margin"
-        android:layout_marginLeft="@dimen/courseinfo_margin"
-        android:layout_marginRight="@dimen/courseinfo_margin"
-        android:id="@+id/courseinfo_content">
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Advanced Learning - Psychology"
-            android:textColor="@color/Dark400"
-            android:id="@+id/courseinfo_title"
-            android:textSize="@dimen/courseinfo_h1"
-            android:typeface = "sans"/>
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="by Priya Rahul"
-            android:textColor="@color/Dark400"
-            android:id="@+id/courseinfo_author"
-            android:textSize="@dimen/courseinfo_small"
-            android:typeface = "sans"/>
+        app:layout_constraintTop_toBottomOf="@+id/courseinfo_title"
+        android:id="@+id/courseinfo_teacherinfo"
+        android:layout_marginTop="20dp"
+        >
 
         <LinearLayout
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:weightSum="5">
-            <Button
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:text="JOIN COURSE"
-                android:background = "@drawable/button_normal"
-                android:layout_weight="1"/>
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:layout_weight="4">
+            android:orientation="vertical">
 
-                <ImageView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:src="@drawable/ic_icon_add_comment_24px"
-                    />
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="340"
-                    android:textAlignment="center"/>
-            </LinearLayout>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/courseinfo_teacher"
+            android:text="By Dr. Tran Minh Triet"
+            style="@style/font_largelabel"
+            android:textColor="@color/Dark300"/>
 
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/courseinfo_ta1"
+            android:text="TA Thanh An Nguyen"
+            style="@style/font_largelabel"
+            android:textColor="@color/Dark300"/>
 
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/courseinfo_ta2"
+            android:text="TA Do Trong Le"
+            style="@style/font_largelabel"
+            android:textColor="@color/Dark300"/>
         </LinearLayout>
 
         <LinearLayout
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="vertical"
+            android:layout_alignParentRight="true"
             >
 
-            <TextView
-                android:layout_width="match_parent"
+            <ImageView
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Description"
-                android:textSize="@dimen/courseinfo_h2"
-                android:layout_marginTop="@dimen/courseinfo_margin"/>
-            <TextView
-                android:layout_width="match_parent"
+                android:src="@drawable/ic_icon_favorite_border_24px"
+                android:id="@+id/courseinfo_favorite"
+                />
+
+            <ImageView
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textSize="@dimen/courseinfo_small"
-                android:lineHeight="20sp"
-                android:text="@string/lorem"/>
+                android:src="@drawable/ic_icon_more_24px"
+                android:id="@+id/courseinfo_more"
+                />
+
+
         </LinearLayout>
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:layout_marginTop="@dimen/courseinfo_margin">
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Teachers and T.As"
-                android:textSize="@dimen/courseinfo_h2"/>
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/lorem"/>
-        </LinearLayout>
+    </RelativeLayout>
 
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/button_normal"
+        android:text="Join"
+        style="@style/font_largelabel"
+        android:id="@+id/courseinfo_join"
+        android:layout_marginTop="30dp"
+        android:paddingRight="100dp"
+        android:paddingLeft="100dp"
+        app:layout_constraintTop_toBottomOf="@+id/courseinfo_teacherinfo"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        />
 
-    </LinearLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/font_capitalized"
+        android:text="Description"
+        android:textColor="@color/MainColor"
+        app:layout_constraintTop_toBottomOf="@id/courseinfo_join"
+        android:id="@+id/courseinfo_descriptiontitle"
+        android:layout_marginTop="30dp"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/lorem"
+        android:id="@+id/courseinfo_description"
+        app:layout_constraintTop_toBottomOf="@id/courseinfo_descriptiontitle"
+        style="@style/font_biglabel"
+        android:layout_marginTop="15dp"
+        android:textColor="@color/Dark300"/>
+    
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/font_capitalized"
+        app:layout_constraintTop_toBottomOf="@id/courseinfo_description"
+        android:text="Syllabus"
+        android:id="@+id/courseinfo_syllabustitle"
+        android:textColor="@color/MainColor"
+        android:layout_marginTop="40dp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/syllabus"
+        app:layout_constraintTop_toBottomOf="@id/courseinfo_syllabustitle"
+        style="@style/font_biglabel"
+        android:layout_marginTop="18dp"
+        android:lineHeight="30sp"/>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

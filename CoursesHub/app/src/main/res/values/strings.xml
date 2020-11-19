@@ -1,9 +1,27 @@
 <resources>
     <string name="app_name">CoursesHub</string>
-    <string name="lorem">Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-        Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
-        It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
-        It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus</string>
-    <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="lorem">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin a congue quam. Donec bibendum viverra odio id hendrerit.
+        Mauris sed iaculis justo. Nunc ac dictum augue, non finibus elit. Pellentesque sollicitudin velit congue, eleifend leo ac, venenatis turpis. Proin in lobortis lectus...</string>
+
+    <string name="syllabus">
+        Week 1: Introduction to Mobile System
+
+        <br>Week 2: Android Studio, Linear Layout</br>
+
+        <br>Week 3: List View and Card View</br>
+
+        <br>Week 4: Introduction to Mobile System</br>
+
+        <br>Week 5: Android Studio, Linear Layout</br>
+
+        <br>Week 6: List View and Card View</br>
+
+        <br>Week 7: Introduction to Mobile System</br>
+
+        <br>Week 8: Android Studio, Linear Layout</br>
+
+        <br>Week 9: List View and Card View</br>
+
+    </string>
 </resources>

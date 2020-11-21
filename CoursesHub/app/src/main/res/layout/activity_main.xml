@@ -7,10 +7,14 @@
     android:layout_marginTop="10dp"
     tools:context=".Main.MainActivity">
 
-    <FrameLayout
+    <fragment
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:id="@+id/mainFragment" />
+        android:id="@+id/mainFragment"
+        android:name="androidx.navigation.fragment.NavHostFragment"
+        app:defaultNavHost="true"
+        app:navGraph = "@navigation/main_navigation"
+        />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -3,6 +3,7 @@ package com.example.courseshub.Main.Adapter;
 import android.content.Context;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentPagerAdapter;
@@ -19,6 +20,7 @@ public class HomePageAdapter extends FragmentPagerAdapter {
     public HomePageAdapter(@NonNull FragmentManager fm, Context context) {
         super(fm, FragmentPagerAdapter.BEHAVIOR_RESUME_ONLY_CURRENT_FRAGMENT);
         _context = context;
+
     }
 
     @NonNull
@@ -26,7 +28,7 @@ public class HomePageAdapter extends FragmentPagerAdapter {
     public Fragment getItem(int position) {
         switch (position){
             case 0:{
-                return CourseListFragment.newInstance();
+                return CourseListFragment.newInstance(((AppCompatActivity)_context).getSupportFragmentManager());
             }
             case 1: return ChatFragment.newInstance();
             case 2: return SearchFragment.newInstance();
@@ -38,5 +40,7 @@ public class HomePageAdapter extends FragmentPagerAdapter {
     public int getCount() {
         return _tabCount;
     }
+
+
 }
 

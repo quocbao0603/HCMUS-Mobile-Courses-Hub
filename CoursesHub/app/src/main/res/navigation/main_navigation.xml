@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" android:id="@+id/main_navigation"
+    app:startDestination="@id/homepageFagment">
+
+    <fragment
+        android:id="@+id/homepageFagment"
+        android:name="com.example.courseshub.Main.HomepageFagment"
+        android:label="HomepageFagment"
+        >
+        <action
+            android:id="@+id/action_homepageFagment_to_courseinfoFragment"
+            app:destination="@id/courseinfoFragment" />
+        <action
+            android:id="@+id/action_homepageFagment_to_couseDetailFragment"
+            app:destination="@id/couseDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/courseinfoFragment"
+        android:name="com.example.courseshub.Course.CourseInfo.CourseinfoFragment"
+        android:label="CourseinfoFragment" />
+    <fragment
+        android:id="@+id/couseDetailFragment"
+        android:name="com.example.courseshub.Course.CourseDetail.CouseDetailFragment"
+        android:label="CouseDetailFragment" >
+        <action
+            android:id="@+id/action_couseDetailFragment_to_couseDetail_SyllabusFragment"
+            app:destination="@id/couseDetail_SyllabusFragment" />
+        <action
+            android:id="@+id/action_couseDetailFragment_to_courseDetail_QuizFragment"
+            app:destination="@id/courseDetail_QuizFragment" />
+        <action
+            android:id="@+id/action_couseDetailFragment_to_courseDetail_NotificationFragment"
+            app:destination="@id/courseDetail_NotificationFragment" />
+        <action
+            android:id="@+id/action_couseDetailFragment_to_courseDetail_DiscussionFragment"
+            app:destination="@id/courseDetail_DiscussionFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/courseDetail_NotificationFragment"
+        android:name="com.example.courseshub.Course.CourseDetail.CourseDetail_Tab.Notification.CourseDetail_NotificationFragment"
+        android:label="CourseDetail_NotificationFragment" />
+    <fragment
+        android:id="@+id/courseDetail_QuizFragment"
+        android:name="com.example.courseshub.Course.CourseDetail.CourseDetail_Tab.Quiz.CourseDetail_QuizFragment"
+        android:label="CourseDetail_QuizFragment" />
+    <fragment
+        android:id="@+id/courseDetail_DiscussionFragment"
+        android:name="com.example.courseshub.Course.CourseDetail.CourseDetail_Tab.Discussion.CourseDetail_DiscussionFragment"
+        android:label="CourseDetail_DiscussionFragment" />
+    <fragment
+        android:id="@+id/couseDetail_SyllabusFragment"
+        android:name="com.example.courseshub.Course.CourseDetail.CourseDetail_Tab.Syllabus.CouseDetail_SyllabusFragment"
+        android:label="CouseDetail_SyllabusFragment" />
+</navigation>

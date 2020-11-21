@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/background_gray"
+    android:layout_marginBottom="15dp"
+    android:layout_height="90dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:text="1"
+        android:id="@+id/coursedetail_quiz_item_number"
+        style="@style/font_capitalized"
+        android:layout_marginLeft="15dp"
+        android:textColor="@color/MainColor"
+        />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="@id/coursedetail_quiz_item_number"
+        android:src="@drawable/ic_icon_attach_file_blue_24px"
+        android:id="@+id/coursedetail_quiz_item_icon1"
+        android:layout_marginLeft="10dp"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/coursedetail_quiz_item_icon1"
+        style="@style/font_largelabel"
+        android:textColor="@color/Dark400"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="5dp"
+        android:id="@+id/coursedetail_quiz_item_title"
+        android:text="Midterm Project"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/coursedetail_quiz_item_title"
+        app:layout_constraintLeft_toRightOf="@id/coursedetail_quiz_item_icon1"
+        style="@style/font_mediumlabel"
+        android:textColor="@color/Dark300"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="5dp"
+        android:text="Submission 10"
+        android:id="@+id/coursedetail_quiz_item_description"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/coursedetail_quiz_item_icon1"
+        style="@style/font_mediumlabel"
+        android:textColor="@color/Dark300"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="5dp"
+        android:text="14 day remained"
+        android:id="@+id/coursedetail_quiz_item_remained"
+        />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:src="@drawable/ic_icon_vertical_align_top_blue_24px"
+        android:id="@+id/coursedetail_quiz_item_icon2"
+        android:layout_marginRight="20dp"/>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

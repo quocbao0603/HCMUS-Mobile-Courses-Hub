@@ -10,6 +10,6 @@ xmlns:android="http://schemas.android.com/apk/res/android">
     android:top="8dp"
     android:bottom="8dp"/>
 
-<solid android:color="@color/MainColor"/>
+<solid android:color="@color/Lighter"/>
 
 </shape>

@@ -1,14 +1,16 @@
-package com.example.courseshub.CourseInfo;
+package com.example.courseshub.Course.CourseInfo;
 
 import android.graphics.Bitmap;
 
-public class CourseInfo {
+public class Course {
+    private int _id;
     private Bitmap _avt;
     private String _title;
     private String _teacher;
     private String _ta1, _ta2;
 
-    public CourseInfo(Bitmap avt, String _title, String _teacher, String _ta1, String _ta2) {
+    public Course(Bitmap avt, String _title, String _teacher, String _ta1, String _ta2) {
+        _id = 0;
         _avt = avt;
         this._title = _title;
         this._teacher = _teacher;

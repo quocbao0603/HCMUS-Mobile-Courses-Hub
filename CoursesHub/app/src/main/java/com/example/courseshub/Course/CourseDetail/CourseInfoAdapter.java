@@ -1,4 +1,4 @@
-package com.example.courseshub.CourseInfo;
+package com.example.courseshub.Course.CourseDetail;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -6,11 +6,9 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentStatePagerAdapter;
 
-import com.example.courseshub.CourseInfo.CourseInfo_Tab.FragmentDiscus;
-import com.example.courseshub.CourseInfo.CourseInfo_Tab.FragmentNoti;
-import com.example.courseshub.CourseInfo.CourseInfo_Tab.FragmentQuiz;
+import com.example.courseshub.Course.CourseDetail.CourseDetail_Tab.Discussion.CourseDetail_DiscussionFragment;
 
-public class CourseInfoAdapter extends FragmentStatePagerAdapter {
+public class    CourseInfoAdapter extends FragmentStatePagerAdapter {
     Fragment[] fragments;
     int tabCount = 3;
 
@@ -21,9 +19,7 @@ public class CourseInfoAdapter extends FragmentStatePagerAdapter {
     @NonNull
     @Override
     public Fragment getItem(int position) {
-        if(position == 0) return FragmentQuiz.newInstance("a", "b");
-        if(position == 1) return FragmentNoti.newInstance("a", "b");
-        return FragmentDiscus.newInstance("a", "b");
+        return CourseDetail_DiscussionFragment.newInstance("a", "b");
     }
 
     @Nullable

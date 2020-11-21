@@ -36,4 +36,7 @@
     <dimen name="fontsize_largelabel">14sp</dimen>
     <dimen name="fontsize_biglabel">16sp</dimen>
 
+    <dimen name="main_margin_lr">20dp</dimen>
+    <dimen name="main_margin_top">10dp</dimen>
+
 </resources>

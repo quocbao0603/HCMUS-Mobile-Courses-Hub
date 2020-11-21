@@ -13,7 +13,7 @@
         app:layout_constraintLeft_toLeftOf="parent"
         style="@style/font_h2"
         android:textColor="@color/Dark500"
-        android:layout_marginLeft="20dp"
+        android:layout_marginLeft="@dimen/main_margin_lr"
         android:text="Courses"/>
 
     <androidx.recyclerview.widget.RecyclerView

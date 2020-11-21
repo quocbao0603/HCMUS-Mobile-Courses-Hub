@@ -6,8 +6,8 @@
     android:padding="10dp"
     android:background="@drawable/background_gray"
     android:layout_marginBottom="12dp"
-    android:layout_marginLeft="20dp"
-    android:layout_marginRight="20dp"
+    android:layout_marginLeft="@dimen/main_margin_lr"
+    android:layout_marginRight="@dimen/main_margin_lr"
     >
 
     <ImageView

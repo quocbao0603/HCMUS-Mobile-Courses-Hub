@@ -37,6 +37,13 @@ public class CouseDetailFragment extends Fragment {
             }
         });
 
+        discussion.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Navigation.findNavController(v).navigate(R.id.action_couseDetailFragment_to_courseDetail_DiscussionFragment);
+            }
+        });
+
         return view;
     }
 

@@ -78,6 +78,7 @@
         <item name="fontFamily">@font/inter_bold</item>
         <item name="android:textSize">@dimen/fontsize_capitalized</item>
         <item name="android:textAllCaps">true</item>
+        <item name="android:letterSpacing">0.25</item>
     </style>
 
     <style name="font_smalltext">

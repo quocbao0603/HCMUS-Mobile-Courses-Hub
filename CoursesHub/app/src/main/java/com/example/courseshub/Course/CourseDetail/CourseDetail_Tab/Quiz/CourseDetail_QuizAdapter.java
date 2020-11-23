@@ -11,6 +11,7 @@ import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.core.content.ContextCompat;
+import androidx.navigation.Navigation;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.courseshub.R;
@@ -66,7 +67,8 @@ public class CourseDetail_QuizAdapter extends RecyclerView.Adapter<CourseDetail_
 
         public void setData(Quiz quiz) {
             _number.setText(Integer.toString(quiz.get_number()));
-
+            if(quiz.get_type() == 1) setSubmittedQuiz();
+            else if (quiz.get_type() == 2) setOverduedQuiz();
             _title.setText((quiz.get_title()));
             _des.setText(quiz.get_des());
             _count.setText(quiz.get_count());
@@ -75,23 +77,23 @@ public class CourseDetail_QuizAdapter extends RecyclerView.Adapter<CourseDetail_
         public void setSubmittedQuiz(){
             _number.setTextColor(ContextCompat.getColor(_context, R.color.Success700));
             _title.setTextColor(ContextCompat.getColor(_context, R.color.Success700));
-            _icon1.setImageBitmap(BitmapFactory.decodeResource(_context.getResources(), R.drawable.ic_icon_attach_file_green_24px));
-            _icon2.setImageBitmap(BitmapFactory.decodeResource(_context.getResources(), R.drawable.ic_icon_vertical_align_top_green_24px));
+            //_icon1.setImageBitmap(BitmapFactory.decodeResource(_context.getResources(), R.drawable.ic_icon_attach_file_green_24px));
+            //_icon2.setImageBitmap(BitmapFactory.decodeResource(_context.getResources(), R.drawable.ic_icon_vertical_align_top_green_24px));
 
         }
 
         public void setOverduedQuiz(){
             _number.setTextColor(ContextCompat.getColor(_context, R.color.Danger700));
             _title.setTextColor(ContextCompat.getColor(_context, R.color.Danger700));
-            _icon1.setImageBitmap(BitmapFactory.decodeResource(_context.getResources(), R.drawable.ic_icon_attach_file_green_24px));
-            _icon2.setImageBitmap(BitmapFactory.decodeResource(_context.getResources(), R.drawable.ic_icon_vertical_align_top_green_24px));
+            //_icon1.setImageBitmap(BitmapFactory.decodeResource(_context.getResources(), R.drawable.ic_icon_attach_file_green_24px));
+            //_icon2.setImageBitmap(BitmapFactory.decodeResource(_context.getResources(), R.drawable.ic_icon_vertical_align_top_green_24px));
         }
 
 
 
         @Override
         public void onClick(View v) {
-            Log.d("DBG", "d");
+            Navigation.findNavController(v).navigate(R.id.action_courseDetail_QuizFragment_to_courseDetial_SubmissionFragment);
         }
     }
 }

@@ -31,6 +31,7 @@ public class CourseListFragment extends Fragment implements CourseListAdapter.Li
     private CourseListAdapter adapter;
     private FragmentManager homefragmentManager;
 
+
     public CourseListFragment(FragmentManager homefragmentManager) {
         this.homefragmentManager = homefragmentManager;
     }

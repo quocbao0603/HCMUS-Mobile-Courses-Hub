@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/main_margin_top"
+    android:layout_marginLeft="@dimen/main_margin_lr"
+    android:layout_marginRight="@dimen/main_margin_lr"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:id="@+id/coursedetail_topbar"
+        app:layout_constraintTop_toTopOf="parent">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/back_button"
+            android:layout_centerVertical="true"
+            android:src="@drawable/ic_icon_arrow_back_24px"
+
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Submission"
+            style="@style/font_capitalized"
+            android:textColor="@color/MainColor"
+            android:layout_toRightOf="@id/back_button"
+            android:layout_centerVertical="true"
+            android:id="@+id/coursedetail_topbartitle"
+            android:layout_marginLeft="10dp"
+            />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/avt_64px"
+            android:layout_alignParentRight="true"/>
+
+    </RelativeLayout>
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/font_h4"
+        android:textColor="@color/Dark500"
+        android:text="Introduction to mobile"
+        app:layout_constraintTop_toBottomOf="@id/coursedetail_topbar"
+        android:layout_marginTop="20dp"
+        android:id="@+id/coursedetail_title"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/coursedetail_title"
+        style="@style/font_capitalized"
+        android:id="@+id/coursedetail_des_title"
+        android:text="DESCRIPTION"
+        android:textColor="@color/Dark500"
+        android:layout_marginTop="15dp"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/coursedetail_des_title"
+        android:text="@string/submit"
+        style="@style/font_body"
+        android:textColor="@color/Dark300"
+        android:lineHeight="25dp"
+        android:id="@+id/coursedetail_des"
+        android:layout_marginTop="2dp"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/coursedetail_des"
+        style="@style/font_capitalized"
+        android:id="@+id/coursedetail_information_title"
+        android:text="INFORMATION"
+        android:textColor="@color/Dark500"
+        android:layout_marginTop="25dp"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/coursedetail_information_title"
+        android:text="@string/infomation"
+        style="@style/font_body"
+        android:textColor="@color/Dark300"
+        android:lineHeight="25dp"
+        android:id="@+id/coursedetail_information"
+        android:layout_marginTop="2dp"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/coursedetail_information"
+        style="@style/font_capitalized"
+        android:id="@+id/coursedetail_submission_title"
+        android:text="SUBMISSION"
+        android:textColor="@color/Dark500"
+        android:layout_marginTop="25dp"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@id/coursedetail_submission_title"
+        android:background="@drawable/background_gray"
+        android:layout_marginTop="20dp"
+        android:paddingBottom="10dp"
+        android:paddingTop="10dp"
+        >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/coursedetail_submission_submit"
+            >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_icon_attach_file_blue_24px"
+                android:layout_centerVertical="true"
+                android:layout_alignParentLeft="true"
+                android:id="@+id/coursedetail_submission_icon"
+                />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_toRightOf="@id/coursedetail_submission_icon"
+                android:layout_centerVertical="true"
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/font_largelabel"
+                    android:id="@+id/coursedetail_submission_des"
+                    android:text="File type: .rar, .zip"
+                    android:textColor="@color/Dark300"
+                    android:layout_marginBottom="5dp"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/font_largelabel"
+                    android:id="@+id/coursedetail_submission_size"
+                    android:text="Maximum:  3MB"
+                    android:textColor="@color/Dark300"
+                    />
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_icon_vertical_align_top_blue_24px"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                />
+        </RelativeLayout>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:background="@drawable/background_darker"
+            android:hint="Note"
+            android:gravity="top"
+            android:textColorHint="@color/Dark200"
+            android:id="@+id/coursedetail_submission_note"
+            android:layout_marginTop="15dp"
+        />
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

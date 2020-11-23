@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="60dp"
+
+    android:layout_marginRight="@dimen/main_margin_lr"
+    android:layout_marginBottom="20dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:id="@+id/coursedetail_discussion_item_leftbox"
+        app:layout_constraintBottom_toBottomOf="parent"
+
+        >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/discussion_avt"
+            android:id="@+id/coursedetail_discussion_item_avt"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/font_mediumlabel"
+            android:textColor="@color/Light500"
+            android:background="@drawable/background_maincolor"
+            android:id="@+id/coursedetail_discussion_item_new"
+            android:text="10"
+            android:layout_alignRight="@+id/coursedetail_discussion_item_avt"
+            android:layout_alignTop="@+id/coursedetail_discussion_item_avt"/>
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/font_lead"
+        android:textColor="@color/Dark500"
+        android:text="Lorem ipsum dolor"
+        app:layout_constraintLeft_toRightOf="@id/coursedetail_discussion_item_leftbox"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="15dp"
+        android:id="@+id/coursedetail_discussion_item_title"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/font_mediumlabel"
+        android:textColor="@color/Dark300"
+        android:text="Lorem ipsum dolor sit amet, onsecte..."
+        app:layout_constraintLeft_toRightOf="@id/coursedetail_discussion_item_leftbox"
+        app:layout_constraintTop_toBottomOf="@id/coursedetail_discussion_item_title"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="15dp"
+        android:id="@+id/coursedetail_discussion_item_des"
+        />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

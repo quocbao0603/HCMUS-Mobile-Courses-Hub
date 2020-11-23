@@ -57,4 +57,6 @@ public class Course {
     public void set_avt(Bitmap _avt) {
         this._avt = _avt;
     }
+
+
 }

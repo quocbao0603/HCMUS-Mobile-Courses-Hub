@@ -43,7 +43,11 @@
     <fragment
         android:id="@+id/courseDetail_QuizFragment"
         android:name="com.example.courseshub.Course.CourseDetail.CourseDetail_Tab.Quiz.CourseDetail_QuizFragment"
-        android:label="CourseDetail_QuizFragment" />
+        android:label="CourseDetail_QuizFragment" >
+        <action
+            android:id="@+id/action_courseDetail_QuizFragment_to_courseDetial_SubmissionFragment"
+            app:destination="@id/courseDetial_SubmissionFragment" />
+    </fragment>
     <fragment
         android:id="@+id/courseDetail_DiscussionFragment"
         android:name="com.example.courseshub.Course.CourseDetail.CourseDetail_Tab.Discussion.CourseDetail_DiscussionFragment"
@@ -52,4 +56,8 @@
         android:id="@+id/couseDetail_SyllabusFragment"
         android:name="com.example.courseshub.Course.CourseDetail.CourseDetail_Tab.Syllabus.CouseDetail_SyllabusFragment"
         android:label="CouseDetail_SyllabusFragment" />
+    <fragment
+        android:id="@+id/courseDetial_SubmissionFragment"
+        android:name="com.example.courseshub.Course.CourseDetail.CourseDetail_Tab.Quiz.Submission.CourseDetial_SubmissionFragment"
+        android:label="CourseDetial_SubmissionFragment" />
 </navigation>

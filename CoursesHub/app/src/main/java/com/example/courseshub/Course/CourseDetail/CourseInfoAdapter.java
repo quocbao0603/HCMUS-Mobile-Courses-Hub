@@ -19,7 +19,7 @@ public class    CourseInfoAdapter extends FragmentStatePagerAdapter {
     @NonNull
     @Override
     public Fragment getItem(int position) {
-        return CourseDetail_DiscussionFragment.newInstance("a", "b");
+        return null;
     }
 
     @Nullable

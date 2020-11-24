@@ -3,6 +3,7 @@ package com.example.courseshub.Course.CourseDetail.CourseDetail_Tab.Quiz.Submiss
 import android.Manifest;
 import android.content.Intent;
 import android.content.pm.PackageManager;
+import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -20,8 +21,13 @@ import com.example.courseshub.Main.MainActivity;
 import com.example.courseshub.R;
 
 public class CourseDetial_SubmissionFragment extends Fragment {
-    public int PICKFILE_RESULT_CODE = 1;
-    String[] permissionArray = {Manifest.permission.MANAGE_EXTERNAL_STORAGE};
+
+    String[] permissionArray = new String[]{Manifest.permission.READ_EXTERNAL_STORAGE};
+    private final int PICKFILE_RESULT_CODE = 123;
+    private final int ACTIVITY_CHOOSE_FILE = 12;
+    private Uri fileuri;
+    private String filepath;
+    private boolean PERMISSION_FLAG;
 
     @Nullable
     @Override
@@ -33,39 +39,75 @@ public class CourseDetial_SubmissionFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 checkandgetPermission();
+                if(PERMISSION_FLAG == true)
+                    onBrowse();
 
             }
         });
         return view;
     }
 
+    public void onBrowse() {
+        Intent chooseFile;
+        Intent intent;
+        chooseFile = new Intent(Intent.ACTION_GET_CONTENT);
+        chooseFile.addCategory(Intent.CATEGORY_OPENABLE);
+        chooseFile.setType("*/*");
+        intent = Intent.createChooser(chooseFile, "Choose a file");
+        startActivityForResult(intent, ACTIVITY_CHOOSE_FILE);
+
+    }
+
+
+    @Override
+    public void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+        switch (requestCode){
+            case ACTIVITY_CHOOSE_FILE:{
+                if(resultCode == -1){
+                    fileuri = data.getData();
+                    filepath = fileuri.getPath();
+                    Toast.makeText(getContext(), "Selected", Toast.LENGTH_SHORT).show();
+                }
+            }
+        }
+    }
+
     public void checkandgetPermission(){
-        if(ContextCompat.checkSelfPermission(getContext(), Manifest.permission.MANAGE_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED){
-            ActivityCompat.requestPermissions(getActivity(), permissionArray, PICKFILE_RESULT_CODE);
-            Log.d("DBG", "Granting");
+        if(ContextCompat.checkSelfPermission(getContext(), permissionArray[0]) == PackageManager.PERMISSION_GRANTED){
+            PERMISSION_FLAG = true;
+        }
+        else if(shouldShowRequestPermissionRationale(permissionArray[0])){
+            PERMISSION_FLAG = true;
+        }
+        else{
+            requestPermissions(permissionArray, PICKFILE_RESULT_CODE);
         }
 
-        Log.d("DBG", "Was Granted");
     }
+
+
 
     @Override
     public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
+        super.onRequestPermissionsResult(requestCode, permissions, grantResults);
         Log.d("DBG", Integer.toString(requestCode));
 
         if(requestCode == PICKFILE_RESULT_CODE){
             if(grantResults.length > 0){
                 if(grantResults[0] == PackageManager.PERMISSION_GRANTED) {
                     Toast.makeText(getContext(), "Granted", Toast.LENGTH_SHORT).show();
-                    Log.d("DBG", "Granted");
-
-                    return;
+                    Log.d("DBG", "Granted read file");
+                    PERMISSION_FLAG = true;
                 }
+                else{
+                    Toast.makeText(getContext(), "Failed", Toast.LENGTH_SHORT).show();
+                    Log.d("DBG", "Failed read file");
+                    PERMISSION_FLAG = false;
+                }
+
             }
-            Toast.makeText(getContext(), "Failed", Toast.LENGTH_SHORT).show();
-            Log.d("DBG", "Failed");
         }
-        Toast.makeText(getContext(), "Failed", Toast.LENGTH_SHORT).show();
-        Log.d("DBG", "Failed");
 
     }
+
 }

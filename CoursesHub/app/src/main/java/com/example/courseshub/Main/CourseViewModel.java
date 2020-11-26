@@ -3,7 +3,7 @@ package com.example.courseshub.Main;
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
 
-import com.example.courseshub.Course.CourseInfo.Course;
+import com.example.courseshub.Course.Course;
 
 public class CourseViewModel extends ViewModel {
     private MutableLiveData<Course> selected = new MutableLiveData<Course>();

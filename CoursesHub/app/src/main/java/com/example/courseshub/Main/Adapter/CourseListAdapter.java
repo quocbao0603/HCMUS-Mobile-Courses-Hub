@@ -14,7 +14,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.courseshub.Main.CourseViewModel;
 import com.example.courseshub.R;
-import com.example.courseshub.Course.CourseInfo.Course;
+import com.example.courseshub.Course.Course;
 
 import java.util.ArrayList;
 import java.util.List;

@@ -1,7 +1,6 @@
 package com.example.courseshub.Main;
 
 import android.os.Bundle;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -11,10 +10,8 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentPagerAdapter;
-import androidx.fragment.app.FragmentTransaction;
 import androidx.viewpager.widget.ViewPager;
 
-import com.example.courseshub.Course.CourseInfo.CourseinfoFragment;
 import com.example.courseshub.Main.Adapter.HomePageAdapter;
 import com.example.courseshub.R;
 import com.google.android.material.tabs.TabLayout;

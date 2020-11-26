@@ -58,14 +58,4 @@ public class HomepageFagment extends Fragment {
         tab.setCompoundDrawablesWithIntrinsicBounds(0, drawable, 0, 0);
         _tabLayout.getTabAt(position).setCustomView(tab);
     }
-
-    public void gotoCourseInfo(){
-        FragmentTransaction fragmentTransaction = getChildFragmentManager().beginTransaction();
-        Fragment courseInfo = CourseinfoFragment.newInstance();
-        Log.d("DBG", "11111111111111");
-        fragmentTransaction.replace(R.id.mainFragment, courseInfo);
-        fragmentTransaction.addToBackStack(null);
-        Log.d("DBG", "22222222222222222");
-        fragmentTransaction.commit();
-    }
 }

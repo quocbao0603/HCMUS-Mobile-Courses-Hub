@@ -16,6 +16,7 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
+import java.util.ArrayList;
 
 public class DatabaseHelper extends SQLiteOpenHelper {
     //Tag for LogCat
@@ -45,7 +46,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     public void createDataBase(){
         // Nếu database chưa tồn tồi, ta copy từ asset
         boolean isDataBaseExist = checkDataBase();
-        //if (!isDataBaseExist){
+        if (!isDataBaseExist){
             this.getReadableDatabase();
             this.close();
             try {
@@ -55,8 +56,8 @@ public class DatabaseHelper extends SQLiteOpenHelper {
             } catch (IOException mIOException) {
                 throw new Error("ErrorCopyingDataBase");
             }
-        //}
-        //else Log.e(TAG, "database Exist!");
+        }
+        else Log.e(TAG, "database Exist!");
     }
 
     //Copy Database from my assets
@@ -109,6 +110,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                 cursor.moveToFirst();
 
                 while(!cursor.isAfterLast()){
+                    //Each attribute, Each Column args(0, 1, 2.....)
                     String id_discussion = cursor.getString(0);
                     String id_course = cursor.getString(1);
                     String information = cursor.getString(2);
@@ -125,6 +127,36 @@ public class DatabaseHelper extends SQLiteOpenHelper {
             }
         }
         else Log.e(TAG, "Query Fail!");
+    }
+
+    //Get database by query be like sql
+    public ArrayList<String> getAllTeacher(){
+        SQLiteDatabase sqLiteDatabase = this.getWritableDatabase();
+        //Enter your query hear
+        String SQL = "SELECT Teacher.name_teacher FROM Teacher";
+        Cursor cursor = sqLiteDatabase.rawQuery(SQL, null);
+        ArrayList<String> result = new ArrayList<String>();
+        if (cursor != null){
+
+            if (cursor.getCount() > 0){
+                cursor.moveToFirst();
+
+                while(!cursor.isAfterLast()){
+                    String nameTeacher = cursor.getString(0);
+
+                    //System.out.println(id + name);
+                    //Log.e(TAG, nameTeacher);
+                    result.add(nameTeacher);
+                    cursor.moveToNext();
+                }
+                cursor.close();
+            }
+            else {
+                Log.e(TAG, "Traversal 1");
+            }
+        }
+        else Log.e(TAG, "Query Fail!");
+        return result;
     }
 
     @Override

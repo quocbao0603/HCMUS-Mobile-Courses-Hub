@@ -4,6 +4,7 @@ import android.Manifest;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.net.Uri;
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -17,10 +18,14 @@ import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
 import androidx.fragment.app.Fragment;
 
+import com.example.courseshub.Course.CourseDetail.CourseDetail_Tab.Syllabus.Syllabus;
 import com.example.courseshub.Main.MainActivity;
 import com.example.courseshub.R;
 
+import java.util.ArrayList;
+
 public class CourseDetial_SubmissionFragment extends Fragment {
+    // Phai fetch dc submission cua quiz doi voi tung nguoi, chua xu ly dc
 
     String[] permissionArray = new String[]{Manifest.permission.READ_EXTERNAL_STORAGE};
     private final int PICKFILE_RESULT_CODE = 123;
@@ -41,7 +46,6 @@ public class CourseDetial_SubmissionFragment extends Fragment {
                 checkandgetPermission();
                 if(PERMISSION_FLAG == true)
                     onBrowse();
-
             }
         });
         return view;
@@ -85,8 +89,6 @@ public class CourseDetial_SubmissionFragment extends Fragment {
 
     }
 
-
-
     @Override
     public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
         super.onRequestPermissionsResult(requestCode, permissions, grantResults);
@@ -107,7 +109,26 @@ public class CourseDetial_SubmissionFragment extends Fragment {
 
             }
         }
+    }
 
+    public class FetchSubmission extends AsyncTask<Integer, Integer, Submission> {
+        @Override
+        protected Submission doInBackground(Integer... integers) {
+
+            //Fetch data from DB
+
+            return null;
+        }
+
+        @Override
+        protected void onPreExecute() {
+            super.onPreExecute();
+        }
+
+        @Override
+        protected void onPostExecute(Submission submission) {
+            super.onPostExecute(submission);
+        }
     }
 
 }

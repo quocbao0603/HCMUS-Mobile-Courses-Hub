@@ -1,4 +1,4 @@
-package com.example.courseshub.Course.CourseInfo;
+package com.example.courseshub.Course;
 
 import android.graphics.Bitmap;
 

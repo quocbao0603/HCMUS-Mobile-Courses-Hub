@@ -17,7 +17,7 @@
     </fragment>
     <fragment
         android:id="@+id/courseinfoFragment"
-        android:name="com.example.courseshub.Course.CourseInfo.CourseinfoFragment"
+        android:name="com.example.courseshub.Course.CourseInfo.CourseInfoFragment"
         android:label="CourseinfoFragment" />
     <fragment
         android:id="@+id/couseDetailFragment"

@@ -2,8 +2,8 @@ package com.example.courseshub.Main.Fragment;
 
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.os.AsyncTask;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -21,14 +21,15 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.example.courseshub.Main.Adapter.CourseListAdapter;
 import com.example.courseshub.Main.CourseViewModel;
 import com.example.courseshub.R;
-import com.example.courseshub.Course.CourseInfo.Course;
+import com.example.courseshub.Course.Course;
 
 import java.util.ArrayList;
 
 public class CourseListFragment extends Fragment implements CourseListAdapter.ListItemClickListener{
     private CourseViewModel viewModel;
-    private ArrayList<Course> holders = new ArrayList<Course>();
+    private ArrayList<Course> courses;
     private CourseListAdapter adapter;
+    private RecyclerView recyclerView;
     private FragmentManager homefragmentManager;
 
 
@@ -40,23 +41,19 @@ public class CourseListFragment extends Fragment implements CourseListAdapter.Li
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.tab_courselist, container, false);
-        RecyclerView recyclerView = view.findViewById(R.id.home_courses);
+        recyclerView = view.findViewById(R.id.home_courses);
         recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
+        FetchCourseList runner = new FetchCourseList();
+        try {
+            courses = runner.execute(new Integer(3)).get();
+        }
+        catch (Exception e){
 
-        Bitmap bitmap = BitmapFactory.decodeResource(getResources(), R.drawable.course_avt);
-        holders.add(new Course(bitmap, "Introudction to mobile", "By Dr. Tran Minh Triet", "TA. Nguyen Thanh An", "TA. Do Trong Le"));
-        holders.add(new Course(bitmap, "Introudction to mobile1", "By Dr. Tran Minh Triet1", "TA. Nguyen Thanh An", "TA. Do Trong Le"));
-        holders.add(new Course(bitmap, "Introudction to mobile2", "By Dr. Tran Minh Triet2", "TA. Nguyen Thanh An", "TA. Do Trong Le"));
-        holders.add(new Course(bitmap, "Introudction to mobile3", "By Dr. Tran Minh Triet3", "TA. Nguyen Thanh An", "TA. Do Trong Le"));
-        holders.add(new Course(bitmap, "Introudction to mobile4", "By Dr. Tran Minh Triet4", "TA. Nguyen Thanh An", "TA. Do Trong Le"));
-        holders.add(new Course(bitmap, "Introudction to mobile1", "By Dr. Tran Minh Triet1", "TA. Nguyen Thanh An", "TA. Do Trong Le"));
-        holders.add(new Course(bitmap, "Introudction to mobile2", "By Dr. Tran Minh Triet2", "TA. Nguyen Thanh An", "TA. Do Trong Le"));
-        holders.add(new Course(bitmap, "Introudction to mobile3", "By Dr. Tran Minh Triet3", "TA. Nguyen Thanh An", "TA. Do Trong Le"));
-        holders.add(new Course(bitmap, "Introudction to mobile4", "By Dr. Tran Minh Triet4", "TA. Nguyen Thanh An", "TA. Do Trong Le"));
+        }
 
-        Log.d("DBG", "Setting courses");
-        adapter = new CourseListAdapter(getContext(), holders, getChildFragmentManager(), this);
+        adapter = new CourseListAdapter(getContext(), courses, getChildFragmentManager(), this);
         recyclerView.setAdapter(adapter);
+
         return view;
     }
 
@@ -76,7 +73,7 @@ public class CourseListFragment extends Fragment implements CourseListAdapter.Li
 
     @Override
     public void onListItemClick(int position, View view) {
-        Course course = holders.get(position);
+        Course course = courses.get(position);
         viewModel.select(course);
         if(false){
             Navigation.findNavController(view).navigate(R.id.action_homepageFagment_to_courseinfoFragment);
@@ -86,8 +83,38 @@ public class CourseListFragment extends Fragment implements CourseListAdapter.Li
             Navigation.findNavController(view).navigate(R.id.action_homepageFagment_to_couseDetailFragment);
         }
 
+    }
 
+    public class FetchCourseList extends AsyncTask<Integer, Integer, ArrayList<Course>> {
+        @Override
+        protected ArrayList<Course> doInBackground(Integer... integers) {
 
+            //Fetch data from DB
+
+            ArrayList<Course> courses = new ArrayList<Course>();
+            Bitmap bitmap = BitmapFactory.decodeResource(getContext().getResources(), R.drawable.course_avt);
+            courses.add(new Course(bitmap, "Introudction to mobile1111", "By Dr. Tran Minh Triet", "TA. Nguyen Thanh An", "TA. Do Trong Le"));
+            courses.add(new Course(bitmap, "Introudction to mobile1", "By Dr. Tran Minh Triet1", "TA. Nguyen Thanh An", "TA. Do Trong Le"));
+            courses.add(new Course(bitmap, "Introudction to mobile2", "By Dr. Tran Minh Triet2", "TA. Nguyen Thanh An", "TA. Do Trong Le"));
+            courses.add(new Course(bitmap, "Introudction to mobile3", "By Dr. Tran Minh Triet3", "TA. Nguyen Thanh An", "TA. Do Trong Le"));
+            courses.add(new Course(bitmap, "Introudction to mobile4", "By Dr. Tran Minh Triet4", "TA. Nguyen Thanh An", "TA. Do Trong Le"));
+            courses.add(new Course(bitmap, "Introudction to mobile1", "By Dr. Tran Minh Triet1", "TA. Nguyen Thanh An", "TA. Do Trong Le"));
+            courses.add(new Course(bitmap, "Introudction to mobile2", "By Dr. Tran Minh Triet2", "TA. Nguyen Thanh An", "TA. Do Trong Le"));
+            courses.add(new Course(bitmap, "Introudction to mobile3", "By Dr. Tran Minh Triet3", "TA. Nguyen Thanh An", "TA. Do Trong Le"));
+            courses.add(new Course(bitmap, "Introudction to mobile4", "By Dr. Tran Minh Triet4", "TA. Nguyen Thanh An", "TA. Do Trong Le"));
+
+            return courses;
+        }
+
+        @Override
+        protected void onPreExecute() {
+            super.onPreExecute();
+        }
+
+        @Override
+        protected void onPostExecute(ArrayList<Course> courses) {
+            super.onPostExecute(courses);
+        }
     }
 }
 

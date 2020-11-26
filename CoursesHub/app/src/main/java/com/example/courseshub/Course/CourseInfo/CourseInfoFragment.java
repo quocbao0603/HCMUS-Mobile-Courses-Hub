@@ -1,5 +1,8 @@
 package com.example.courseshub.Course.CourseInfo;
 
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -11,10 +14,13 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
 
+import com.example.courseshub.Course.Course;
 import com.example.courseshub.Main.CourseViewModel;
 import com.example.courseshub.R;
 
-public class CourseinfoFragment extends Fragment {
+import java.util.ArrayList;
+
+public class CourseInfoFragment extends Fragment {
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
@@ -29,9 +35,9 @@ public class CourseinfoFragment extends Fragment {
         setCourseInfo(course, view);
     }
 
-    public static CourseinfoFragment newInstance() {
+    public static CourseInfoFragment newInstance() {
         Bundle args = new Bundle();
-        CourseinfoFragment fragment = new CourseinfoFragment();
+        CourseInfoFragment fragment = new CourseInfoFragment();
         fragment.setArguments(args);
         return fragment;
     }
@@ -47,4 +53,23 @@ public class CourseinfoFragment extends Fragment {
         ta1.setText(course.get_ta1());
         ta2.setText(course.get_ta2());
     }
+
+    public class FetchCourseInfo extends AsyncTask<Integer, Integer, CourseInfo> {
+        @Override
+        protected CourseInfo doInBackground(Integer... integers) {
+            return null;
+        }
+
+        @Override
+        protected void onPreExecute() {
+            super.onPreExecute();
+        }
+
+        @Override
+        protected void onPostExecute(CourseInfo course) {
+            super.onPostExecute(course);
+        }
+    }
+
+
 }

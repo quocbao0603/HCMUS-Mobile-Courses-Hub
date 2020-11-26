@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/tv_verification"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="100dp"
+            android:text="Vertification"
+            android:textAlignment="center"
+            android:textAppearance="@style/font_display2" />
+
+        <TextView
+            android:id="@+id/tv_hint_verification"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:text="Enter the verification code\nwe just sent you on your email \nor phone"
+            android:textAppearance="@style/font_body"
+            android:layout_marginLeft="50dp"
+            android:layout_below="@id/tv_verification" />
+
+        <EditText
+            android:id="@+id/editText_input_code_verification"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="80dp"
+            android:layout_marginLeft="50dp"
+            android:layout_marginRight="50dp"
+            android:hint="Your code"
+            style="@style/font_capitalized"
+            android:textSize="24sp"
+            android:textAlignment="center"
+            android:inputType="numberDecimal"
+            android:layout_below="@id/tv_hint_verification" />
+
+        <TextView
+            android:id="@+id/tv_send_again"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="If you didn’t receive, back and\nsend again"
+            android:layout_marginLeft="50dp"
+            android:layout_below="@id/editText_input_code_verification" />
+
+        <Button
+            android:id="@+id/btn_verify_code"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:text="Verify"
+            style="@style/font_h6"
+            android:textColor="@color/cardview_light_background"
+            android:background="@color/MainColor"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/tv_send_again" />
+
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

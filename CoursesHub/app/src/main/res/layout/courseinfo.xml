@@ -32,7 +32,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/courseinfo_teacher"
-            android:text="By Dr. Tran Minh Triet"
+            android:text="By Nguyen Van A"
             style="@style/font_largelabel"
             android:textColor="@color/Dark300"/>
 
@@ -40,7 +40,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/courseinfo_ta1"
-            android:text="TA Thanh An Nguyen"
+            android:text="TA Nguyen Van A"
             style="@style/font_largelabel"
             android:textColor="@color/Dark300"/>
 
@@ -48,7 +48,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/courseinfo_ta2"
-            android:text="TA Do Trong Le"
+            android:text="TA Nguyen Van A"
             style="@style/font_largelabel"
             android:textColor="@color/Dark300"/>
         </LinearLayout>

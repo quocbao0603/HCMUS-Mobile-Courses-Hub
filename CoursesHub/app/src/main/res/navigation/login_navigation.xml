@@ -29,5 +29,13 @@
     <fragment
         android:id="@+id/verificationCodeFragment"
         android:name="com.example.courseshub.Login_Register.VerificationCodeFragment"
-        android:label="VerificationCodeFragment" />
+        android:label="VerificationCodeFragment" >
+        <action
+            android:id="@+id/action_verificationCodeFragment_to_change_password_forget_fragment"
+            app:destination="@id/change_password_forget_fragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/change_password_forget_fragment"
+        android:name="com.example.courseshub.Login_Register.change_password_forget_fragment"
+        android:label="change_password_forget_fragment" />
 </navigation>

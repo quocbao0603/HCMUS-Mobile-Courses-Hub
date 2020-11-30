@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -54,6 +55,7 @@ public class CourseListFragment extends Fragment implements CourseListAdapter.Li
         adapter = new CourseListAdapter(getContext(), courses, getChildFragmentManager(), this);
         recyclerView.setAdapter(adapter);
 
+
         return view;
     }
 
@@ -79,7 +81,7 @@ public class CourseListFragment extends Fragment implements CourseListAdapter.Li
             Navigation.findNavController(view).navigate(R.id.action_homepageFagment_to_courseinfoFragment);
         }
         else{
-            Toast.makeText(getContext(), "DDD", Toast.LENGTH_SHORT).show();
+
             Navigation.findNavController(view).navigate(R.id.action_homepageFagment_to_couseDetailFragment);
         }
 
@@ -93,15 +95,18 @@ public class CourseListFragment extends Fragment implements CourseListAdapter.Li
 
             ArrayList<Course> courses = new ArrayList<Course>();
             Bitmap bitmap = BitmapFactory.decodeResource(getContext().getResources(), R.drawable.course_avt);
-            courses.add(new Course(bitmap, "Introudction to mobile1111", "By Dr. Tran Minh Triet", "TA. Nguyen Thanh An", "TA. Do Trong Le"));
-            courses.add(new Course(bitmap, "Introudction to mobile1", "By Dr. Tran Minh Triet1", "TA. Nguyen Thanh An", "TA. Do Trong Le"));
-            courses.add(new Course(bitmap, "Introudction to mobile2", "By Dr. Tran Minh Triet2", "TA. Nguyen Thanh An", "TA. Do Trong Le"));
-            courses.add(new Course(bitmap, "Introudction to mobile3", "By Dr. Tran Minh Triet3", "TA. Nguyen Thanh An", "TA. Do Trong Le"));
-            courses.add(new Course(bitmap, "Introudction to mobile4", "By Dr. Tran Minh Triet4", "TA. Nguyen Thanh An", "TA. Do Trong Le"));
-            courses.add(new Course(bitmap, "Introudction to mobile1", "By Dr. Tran Minh Triet1", "TA. Nguyen Thanh An", "TA. Do Trong Le"));
-            courses.add(new Course(bitmap, "Introudction to mobile2", "By Dr. Tran Minh Triet2", "TA. Nguyen Thanh An", "TA. Do Trong Le"));
-            courses.add(new Course(bitmap, "Introudction to mobile3", "By Dr. Tran Minh Triet3", "TA. Nguyen Thanh An", "TA. Do Trong Le"));
-            courses.add(new Course(bitmap, "Introudction to mobile4", "By Dr. Tran Minh Triet4", "TA. Nguyen Thanh An", "TA. Do Trong Le"));
+            courses.add(new Course(bitmap, "Introudction to mobile1", "By Nguyen Van A", "TA. Nguyen Van A", "TA. Nguyen Van A"));
+            courses.add(new Course(bitmap, "Introudction to mobile1", "By Nguyen Van A", "TA. Nguyen Van A", "TA. Nguyen Van A"));
+            courses.add(new Course(bitmap, "Introudction to mobile1", "By Nguyen Van A", "TA. Nguyen Van A", "TA. Nguyen Van A"));
+            courses.add(new Course(bitmap, "Introudction to mobile1", "By Nguyen Van A", "TA. Nguyen Van A", "TA. Nguyen Van A"));
+            courses.add(new Course(bitmap, "Introudction to mobile1", "By Nguyen Van A", "TA. Nguyen Van A", "TA. Nguyen Van A"));
+            courses.add(new Course(bitmap, "Introudction to mobile1", "By Nguyen Van A", "TA. Nguyen Van A", "TA. Nguyen Van A"));
+            courses.add(new Course(bitmap, "Introudction to mobile1", "By Nguyen Van A", "TA. Nguyen Van A", "TA. Nguyen Van A"));
+            courses.add(new Course(bitmap, "Introudction to mobile1", "By Nguyen Van A", "TA. Nguyen Van A", "TA. Nguyen Van A"));
+            courses.add(new Course(bitmap, "Introudction to mobile1", "By Nguyen Van A", "TA. Nguyen Van A", "TA. Nguyen Van A"));
+            courses.add(new Course(bitmap, "Introudction to mobile1", "By Nguyen Van A", "TA. Nguyen Van A", "TA. Nguyen Van A"));
+            courses.add(new Course(bitmap, "Introudction to mobile1", "By Nguyen Van A", "TA. Nguyen Van A", "TA. Nguyen Van A"));
+
 
             return courses;
         }

@@ -40,6 +40,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:src="@drawable/avt_64px"
+            android:id="@+id/profile"
             android:layout_alignParentRight="true"/>
 
     </RelativeLayout>
@@ -78,7 +79,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 style="@style/font_h3"
-                android:text="Syllabus"
+                android:text="Syllabuses"
                 android:textColor="@color/Light500"
                 android:id="@+id/coursedetail_syllabus_title"/>
 
@@ -123,7 +124,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 style="@style/font_h3"
-                android:text="Quiz"
+                android:text="Quizzes"
                 android:textColor="@color/Light500"
                 android:id="@+id/coursedetail_quiz_title"/>
 
@@ -133,7 +134,7 @@
                 style="@style/font_biglabel"
                 android:textColor="@color/Success900"
                 android:id="@+id/coursedetail_quiz_notification"
-                android:text="2 new quizs"/>
+                android:text="2 new quizes"/>
 
         </LinearLayout>
 
@@ -167,7 +168,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 style="@style/font_h3"
-                android:text="Discussion"
+                android:text="Discussions"
                 android:textColor="@color/Light500"
                 android:id="@+id/coursedetail_discussion_title"/>
 

@@ -12,6 +12,7 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.navigation.Navigation;
 
 import com.example.courseshub.Main.MainActivity;
 import com.example.courseshub.R;
@@ -44,12 +45,8 @@ public class VerificationCodeFragment extends Fragment implements View.OnClickLi
                 return;
             }
 
-            //Intent to MainActivity class
-            Toast.makeText(getContext().getApplicationContext(), "Login success", Toast.LENGTH_LONG).show();
-            Intent intent = new Intent(getActivity().getApplicationContext(), MainActivity.class);
-            intent.putExtra("isLogined", true);
-            startActivity(intent);
-            getActivity().finish();
+            //navigation to change password fragment
+            Navigation.findNavController(v).navigate(R.id.action_verificationCodeFragment_to_change_password_forget_fragment);
         }
     }
 

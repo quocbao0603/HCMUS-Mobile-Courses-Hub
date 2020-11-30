@@ -1,7 +1,9 @@
 package com.example.courseshub.Course.CourseDetail.CourseDetail_Tab.Syllabus;
 
 import android.content.Context;
+import android.content.Intent;
 import android.graphics.BitmapFactory;
+import android.net.Uri;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -54,6 +56,7 @@ public class CourseDetail_SyllabusAdapter extends RecyclerView.Adapter<CourseDet
         private TextView _des;
         private ImageView _icon2;
 
+
         public SyllabusHolder(@NonNull View itemView) {
             super(itemView);
             _number = itemView.findViewById(R.id.coursedetail_syllabus_item_number);
@@ -79,9 +82,12 @@ public class CourseDetail_SyllabusAdapter extends RecyclerView.Adapter<CourseDet
         }
 
         @Override
-        public void onClick(View v) {
-            Log.d("DBG", "d");
-        }
+        public void onClick(View v){
+            int position = getAdapterPosition();
+            Intent i = new Intent(Intent.ACTION_VIEW);
+            i.setData(Uri.parse(_data.get(position).get_url()));
+            _context.startActivity(i);
+        };
     }
 }
 

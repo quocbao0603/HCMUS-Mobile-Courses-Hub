@@ -6,6 +6,7 @@ import android.os.Bundle;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.navigation.Navigation;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewpager.widget.ViewPager;
@@ -13,6 +14,7 @@ import androidx.viewpager.widget.ViewPager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 
 import com.example.courseshub.Course.CourseDetail.CourseDetail_Tab.Syllabus.Syllabus;
 import com.example.courseshub.R;
@@ -31,6 +33,8 @@ public class CourseDetail_QuizFragment extends Fragment {
 
         View view =  inflater.inflate(R.layout.coursedetail_tab_quiz, container, false);
         RecyclerView recyclerView = view.findViewById(R.id.coursedetail_list);
+        ImageView profile = view.findViewById(R.id.profile);
+
         recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
 
         try {
@@ -42,6 +46,13 @@ public class CourseDetail_QuizFragment extends Fragment {
 
         CourseDetail_QuizAdapter adapter = new CourseDetail_QuizAdapter(getContext(), quizzes);
         recyclerView.setAdapter(adapter);
+
+        profile.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Navigation.findNavController(v).navigate(R.id.action_courseDetail_QuizFragment_to_profileFragment);
+            }
+        });
         return view;
     }
 

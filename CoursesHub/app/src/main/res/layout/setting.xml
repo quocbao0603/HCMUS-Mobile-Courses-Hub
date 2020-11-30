@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_marginTop="@dimen/main_margin_top"
+    android:layout_marginRight="@dimen/main_margin_lr"
+    android:layout_marginLeft="@dimen/main_margin_lr">
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+
+        android:id="@+id/home_topbar"
+        >
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_icon_outlined_blue"
+        android:layout_gravity="center"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:id="@+id/topbar_button"
+        />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/avt_64px"
+        android:id="@+id/profile"
+        android:layout_alignParentRight="true"
+        android:layout_gravity="right"
+
+
+        />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        app:layout_constraintTop_toBottomOf="@id/home_topbar"
+        android:orientation="vertical"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/font_h3"
+            android:text="Setting"
+            android:layout_marginBottom="15dp"
+            android:textColor="@color/Dark400"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/font_h3"
+            android:layout_marginBottom="15dp"
+            android:text="Rate Us"
+            android:textColor="@color/MainColor"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/font_h3"
+            android:layout_marginBottom="15dp"
+            android:text="About Us"
+            android:textColor="@color/Dark400"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/font_h3"
+            android:text="Log Out"
+            android:id="@+id/setting_logout"
+            android:layout_marginBottom="15dp"
+            android:textColor="@color/Dark400"/>
+
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,15 +1,18 @@
 package com.example.courseshub.Main;
 
+import android.media.Image;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentPagerAdapter;
+import androidx.navigation.Navigation;
 import androidx.viewpager.widget.ViewPager;
 
 import com.example.courseshub.Main.Adapter.HomePageAdapter;
@@ -32,6 +35,21 @@ public class HomepageFagment extends Fragment {
         _tabLayout = view.findViewById(R.id.bottomBar);
         _tabLayout.setupWithViewPager(_viewPager);
         setBottomBar_Items();
+        ImageView button = view.findViewById(R.id.topbar_button);
+        ImageView profile = view.findViewById(R.id.profile);
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Navigation.findNavController(v).navigate(R.id.action_homepageFagment_to_settingFragment);
+            }
+        });
+
+        profile.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Navigation.findNavController(v).navigate(R.id.action_homepageFagment_to_profileFragment);
+            }
+        });
         return view;
     }
 

@@ -45,6 +45,7 @@
             android:layout_height="wrap_content"
             android:src="@drawable/avt_64px"
             android:layout_alignParentRight="true"
+            android:id="@+id/profile"
             android:layout_gravity="right"
 
             />

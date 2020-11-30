@@ -14,11 +14,21 @@
         <action
             android:id="@+id/action_homepageFagment_to_couseDetailFragment"
             app:destination="@id/couseDetailFragment" />
+        <action
+            android:id="@+id/action_homepageFagment_to_settingFragment"
+            app:destination="@id/settingFragment" />
+        <action
+            android:id="@+id/action_homepageFagment_to_profileFragment"
+            app:destination="@id/profileFragment" />
     </fragment>
     <fragment
         android:id="@+id/courseinfoFragment"
         android:name="com.example.courseshub.Course.CourseInfo.CourseInfoFragment"
-        android:label="CourseinfoFragment" />
+        android:label="CourseinfoFragment" >
+        <action
+            android:id="@+id/action_courseinfoFragment_to_profileFragment"
+            app:destination="@id/profileFragment" />
+    </fragment>
     <fragment
         android:id="@+id/couseDetailFragment"
         android:name="com.example.courseshub.Course.CourseDetail.CouseDetailFragment"
@@ -35,11 +45,21 @@
         <action
             android:id="@+id/action_couseDetailFragment_to_courseDetail_DiscussionFragment"
             app:destination="@id/courseDetail_DiscussionFragment" />
+        <action
+            android:id="@+id/action_couseDetailFragment_to_profileFragment"
+            app:destination="@id/profileFragment" />
+        <action
+            android:id="@+id/action_couseDetailFragment_to_profileFragment2"
+            app:destination="@id/profileFragment" />
     </fragment>
     <fragment
         android:id="@+id/courseDetail_NotificationFragment"
         android:name="com.example.courseshub.Course.CourseDetail.CourseDetail_Tab.Notification.CourseDetail_NotificationFragment"
-        android:label="CourseDetail_NotificationFragment" />
+        android:label="CourseDetail_NotificationFragment" >
+        <action
+            android:id="@+id/action_courseDetail_NotificationFragment_to_profileFragment"
+            app:destination="@id/profileFragment" />
+    </fragment>
     <fragment
         android:id="@+id/courseDetail_QuizFragment"
         android:name="com.example.courseshub.Course.CourseDetail.CourseDetail_Tab.Quiz.CourseDetail_QuizFragment"
@@ -47,17 +67,47 @@
         <action
             android:id="@+id/action_courseDetail_QuizFragment_to_courseDetial_SubmissionFragment"
             app:destination="@id/courseDetial_SubmissionFragment" />
+        <action
+            android:id="@+id/action_courseDetail_QuizFragment_to_profileFragment"
+            app:destination="@id/profileFragment" />
     </fragment>
     <fragment
         android:id="@+id/courseDetail_DiscussionFragment"
         android:name="com.example.courseshub.Course.CourseDetail.CourseDetail_Tab.Discussion.CourseDetail_DiscussionFragment"
-        android:label="CourseDetail_DiscussionFragment" />
+        android:label="CourseDetail_DiscussionFragment" >
+        <action
+            android:id="@+id/action_courseDetail_DiscussionFragment_to_profileFragment"
+            app:destination="@id/profileFragment" />
+    </fragment>
     <fragment
         android:id="@+id/couseDetail_SyllabusFragment"
         android:name="com.example.courseshub.Course.CourseDetail.CourseDetail_Tab.Syllabus.CouseDetail_SyllabusFragment"
-        android:label="CouseDetail_SyllabusFragment" />
+        android:label="CouseDetail_SyllabusFragment" >
+        <action
+            android:id="@+id/action_couseDetail_SyllabusFragment_to_profileFragment"
+            app:destination="@id/profileFragment" />
+    </fragment>
     <fragment
         android:id="@+id/courseDetial_SubmissionFragment"
         android:name="com.example.courseshub.Course.CourseDetail.CourseDetail_Tab.Quiz.Submission.CourseDetial_SubmissionFragment"
-        android:label="CourseDetial_SubmissionFragment" />
+        android:label="CourseDetial_SubmissionFragment" >
+        <action
+            android:id="@+id/action_courseDetial_SubmissionFragment_to_profileFragment"
+            app:destination="@id/profileFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/settingFragment"
+        android:name="com.example.courseshub.Setting.SettingFragment"
+        android:label="SettingFragment" >
+        <action
+            android:id="@+id/action_settingFragment_to_homepageFagment"
+            app:destination="@id/homepageFagment" />
+        <action
+            android:id="@+id/action_settingFragment_to_profileFragment"
+            app:destination="@id/profileFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.example.courseshub.Profile.ProfileFragment"
+        android:label="ProfileFragment" />
 </navigation>

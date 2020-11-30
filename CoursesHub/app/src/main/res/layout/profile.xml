@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_marginTop="@dimen/main_margin_top"
+    android:layout_marginLeft="@dimen/main_margin_lr"
+    android:layout_marginRight="@dimen/main_margin_lr">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:id="@+id/profile_topbar"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/back_button"
+            android:layout_centerVertical="true"
+            android:src="@drawable/ic_icon_arrow_back_24px"
+
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Profile"
+            style="@style/font_capitalized"
+            android:textColor="@color/MainColor"
+            android:layout_toRightOf="@id/back_button"
+            android:layout_centerVertical="true"
+            android:id="@+id/coursedetail_topbartitle"
+            android:layout_marginLeft="10dp"
+            />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_icon_mode_24px"
+            android:layout_alignParentRight="true"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/profile_topbar"
+        android:id="@+id/profile_avt_name"
+        android:layout_marginTop="20dp"
+        >
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/profile_avt"
+            android:id="@+id/profile_avt"
+            android:layout_alignParentLeft="true"
+
+            />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_toRightOf="@id/profile_avt"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20dp"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Cristiano Ronaldo"
+                style="@style/font_blockquotes"
+                android:textColor="@color/MainColor"
+                android:id="@+id/profile_name"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="18CNTN"
+                style="@style/font_capitalized"
+                android:textColor="@color/MainColor"
+                android:id="@+id/profile_branch"
+                />
+
+        </LinearLayout>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation= "horizontal"
+        app:layout_constraintTop_toBottomOf="@id/profile_avt_name"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="20dp"
+        android:id="@+id/profile_phone"
+        >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_icon_phone_gray_24px"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/Dark300"
+            android:text="(056) - 3534 -1234"
+            android:layout_marginLeft="10dp"
+            style="@style/font_largelabel"
+            android:id="@+id/profile_phonenumber"
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation= "horizontal"
+        app:layout_constraintTop_toBottomOf="@id/profile_phone"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="15dp"
+        android:id="@+id/profile_email"
+        >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_icon_mail"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/Dark300"
+            android:text="18120000@student.hcmus.edu.vn"
+            style="@style/font_largelabel"
+            android:id="@+id/profile_emailstr"
+            android:layout_marginLeft="10dp"
+            />
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/profile_course_title"
+        style="@style/font_textlabel"
+        android:textColor="@color/MainColor"
+        android:text="YOUR COURSES"
+        app:layout_constraintTop_toBottomOf="@id/profile_email"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginTop="30dp"
+
+        />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:id="@+id/profile_course_list"
+        app:layout_constraintTop_toBottomOf="@id/profile_course_title"
+        />
+
+
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

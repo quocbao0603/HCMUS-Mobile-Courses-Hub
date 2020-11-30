@@ -7,10 +7,12 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.navigation.Navigation;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -29,6 +31,8 @@ public class CouseDetail_SyllabusFragment extends Fragment {
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view =  inflater.inflate(R.layout.coursedetail_tab_syllabus, container, false);
         RecyclerView recyclerView = view.findViewById(R.id.coursedetail_syllabus_list);
+        ImageView profile = view.findViewById(R.id.profile);
+
         recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
         try {
             syllabuses = new FetchSyllabusList().execute(new Integer(3)).get();
@@ -38,6 +42,13 @@ public class CouseDetail_SyllabusFragment extends Fragment {
         }
         CourseDetail_SyllabusAdapter adapter = new CourseDetail_SyllabusAdapter(getContext(), syllabuses);
         recyclerView.setAdapter(adapter);
+
+        profile.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Navigation.findNavController(v).navigate(R.id.action_couseDetail_SyllabusFragment_to_profileFragment);
+            }
+        });
         return view;
     }
 
